@@ -1,0 +1,2325 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/2/2023 11:02:46 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-4N3M2QN"
+  DTS:CreatorName="DESKTOP-4N3M2QN\ayhai"
+  DTS:DTSID="{CD8F7041-4209-40EB-822A-7527249C31E7}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5035.3"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{EC918199-1695-484F-BFDD-D916E5BCAF59}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[C:\Data.xlsx]"
+      DTS:CreationName="ADO.NET:OLEDB"
+      DTS:DTSID="{4A674A1D-E7A0-4083-B91F-AE22AE64E9EA}"
+      DTS:ObjectName="C:\Data.xlsx">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">"Data Source="+ @[User::FilePath] +";Provider=Microsoft.ACE.OLEDB.12.0;Extended Properties=Excel 12.0;"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=C:\Data (Autosaved).xlsx;Provider=Microsoft.ACE.OLEDB.12.0;Extended Properties=Excel 12.0;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{41934809-4D18-461E-9891-8A1E5E69ABEE}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:PropertyExpression
+        DTS:Name="ExcelFilePath">@[User::FilePath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Data (Autosaved).xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{F0EF27CB-6502-4936-95BA-449BC4EF9A40}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:PropertyExpression
+        DTS:Name="ExcelFilePath">@[User::FilePath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Data (Autosaved).xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 10]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{B923AA34-B1B4-42A7-AEAF-FC7245EC5693}"
+      DTS:ObjectName="Excel Connection Manager 10">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Data (Autosaved).xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 2]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{988193A8-C055-471D-B4A2-ABD89A50F46D}"
+      DTS:ObjectName="Excel Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Data.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 3]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{564A4235-8AD2-4452-9F0F-E2D9541DBA97}"
+      DTS:ObjectName="Excel Connection Manager 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Data.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 4]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{4F0C167C-7719-49FB-8A42-654AE1642C01}"
+      DTS:ObjectName="Excel Connection Manager 4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Data.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 5]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{3CFD39CC-9F28-4B29-96AF-FDF25CAD1D33}"
+      DTS:ObjectName="Excel Connection Manager 5">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Data.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 6]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{43DF4593-E3AE-4BA2-9745-92FB0B4B7B30}"
+      DTS:ObjectName="Excel Connection Manager 6">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Data (Autosaved).xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 7]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{E1C3F0BD-1D84-4215-BBBF-FDBC4CBCB0FB}"
+      DTS:ObjectName="Excel Connection Manager 7">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Data (Autosaved).xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 8]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{7A5F6EC4-E064-4318-BAB7-D4C5AB5D4541}"
+      DTS:ObjectName="Excel Connection Manager 8">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Data (Autosaved).xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 9]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{84D83192-C18E-4D1A-918F-08F693DAAC8B}"
+      DTS:ObjectName="Excel Connection Manager 9">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Data (Autosaved).xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.Sales]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3B47E68F-EC5E-46AD-9462-5E31EE5BA3FF}"
+      DTS:ObjectName="LocalHost.Sales">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=Sales;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{3B47E68F-EC5E-46AD-9462-5E31EE5BA3FF}LocalHost.Sales;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.SalesDWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{49F0C21A-BB34-40B2-99CC-0217B3D72D33}"
+      DTS:ObjectName="LocalHost.SalesDWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=SalesDWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{49F0C21A-BB34-40B2-99CC-0217B3D72D33}LocalHost.SalesDWH;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.SalesDWH 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7A32AB79-6186-482A-842C-774935093A1A}"
+      DTS:ObjectName="LocalHost.SalesDWH 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=SalesDWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{7A32AB79-6186-482A-842C-774935093A1A}LocalHost.SalesDWH 1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.SalesDWH 2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{BF1CE96C-FEAD-429E-8405-F69826378600}"
+      DTS:ObjectName="LocalHost.SalesDWH 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=SalesDWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{BF1CE96C-FEAD-429E-8405-F69826378600}LocalHost.SalesDWH 2;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.SalesDWH 3]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{247A5F74-33FE-4774-B1ED-410323C9A7D5}"
+      DTS:ObjectName="LocalHost.SalesDWH 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=SalesDWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{247A5F74-33FE-4774-B1ED-410323C9A7D5}LocalHost.SalesDWH 3;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.SalesDWH 4]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E871618B-21E0-4E4C-BBAE-BA4A324AADAD}"
+      DTS:ObjectName="LocalHost.SalesDWH 4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=SalesDWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{E871618B-21E0-4E4C-BBAE-BA4A324AADAD}LocalHost.SalesDWH 4;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.SalesDWH 5]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0F7BE4F3-756C-4840-A55E-A0BF302CE2AB}"
+      DTS:ObjectName="LocalHost.SalesDWH 5">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=SalesDWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{0F7BE4F3-756C-4840-A55E-A0BF302CE2AB}LocalHost.SalesDWH 5;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.SalesDWH 6]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{078937ED-6E05-421A-B8C6-AB4B33636796}"
+      DTS:ObjectName="LocalHost.SalesDWH 6">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=SalesDWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{078937ED-6E05-421A-B8C6-AB4B33636796}LocalHost.SalesDWH 6;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.SalesDWH 7]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5C9E8217-103D-4031-BD12-828A06E1D983}"
+      DTS:ObjectName="LocalHost.SalesDWH 7">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=SalesDWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{5C9E8217-103D-4031-BD12-828A06E1D983}LocalHost.SalesDWH 7;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.SalesDWH 8]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{AF0EE245-922D-4944-B52D-1233E1B81DEB}"
+      DTS:ObjectName="LocalHost.SalesDWH 8">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=SalesDWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{AF0EE245-922D-4944-B52D-1233E1B81DEB}LocalHost.SalesDWH 8;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{0BC116FB-4CD7-4B0D-8C78-2F7691DE7222}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FilePath">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Data (Autosaved).xlsx</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{0A6B4D55-51AD-4BE5-9EE4-6F318D5A9CBE}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SheetName1">
+      <DTS:VariableValue
+        DTS:DataType="8">Sales$</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BF3F0AF8-DBCC-44EA-8EAE-4DC751D00A4B}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SheetName2">
+      <DTS:VariableValue
+        DTS:DataType="8">Product$</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E5F87F38-8093-4249-9A83-4E5B26A31F95}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SheetName3">
+      <DTS:VariableValue
+        DTS:DataType="8">Stores$</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{6A278771-623D-42F0-BD57-BACD94F40346}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SheetName4">
+      <DTS:VariableValue
+        DTS:DataType="8">Reps$</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{7A5CC6B8-BD66-409E-9C4F-AA106AE3DF61}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load Product"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{50bfe652-99f5-465f-b5a1-0912edac87c1}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Product"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load Product\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Product$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable">User::SheetName2</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">1</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Product\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 8]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 8]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load Product\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Product\Excel Source.Outputs[Excel Source Output].Columns[ProductID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Product\Excel Source.Outputs[Excel Source Output].ExternalColumns[ProductID]"
+                      lineageId="Package\Load Product\Excel Source.Outputs[Excel Source Output].Columns[ProductID]"
+                      name="ProductID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Product\Excel Source.Outputs[Excel Source Output].Columns[ProductCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Product\Excel Source.Outputs[Excel Source Output].ExternalColumns[ProductCode]"
+                      length="255"
+                      lineageId="Package\Load Product\Excel Source.Outputs[Excel Source Output].Columns[ProductCode]"
+                      name="ProductCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Product\Excel Source.Outputs[Excel Source Output].Columns[Description]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Product\Excel Source.Outputs[Excel Source Output].ExternalColumns[Description]"
+                      length="255"
+                      lineageId="Package\Load Product\Excel Source.Outputs[Excel Source Output].Columns[Description]"
+                      name="Description"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Product\Excel Source.Outputs[Excel Source Output].Columns[Category]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Product\Excel Source.Outputs[Excel Source Output].ExternalColumns[Category]"
+                      length="255"
+                      lineageId="Package\Load Product\Excel Source.Outputs[Excel Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Product\Excel Source.Outputs[Excel Source Output].Columns[Subcategory]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Product\Excel Source.Outputs[Excel Source Output].ExternalColumns[Subcategory]"
+                      length="255"
+                      lineageId="Package\Load Product\Excel Source.Outputs[Excel Source Output].Columns[Subcategory]"
+                      name="Subcategory"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Product\Excel Source.Outputs[Excel Source Output].Columns[Brand]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Product\Excel Source.Outputs[Excel Source Output].ExternalColumns[Brand]"
+                      length="255"
+                      lineageId="Package\Load Product\Excel Source.Outputs[Excel Source Output].Columns[Brand]"
+                      name="Brand"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Product\Excel Source.Outputs[Excel Source Output].ExternalColumns[ProductID]"
+                      dataType="r8"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Product\Excel Source.Outputs[Excel Source Output].ExternalColumns[ProductCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="ProductCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load Product\Excel Source.Outputs[Excel Source Output].ExternalColumns[Description]"
+                      dataType="wstr"
+                      length="255"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Load Product\Excel Source.Outputs[Excel Source Output].ExternalColumns[Category]"
+                      dataType="wstr"
+                      length="255"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Load Product\Excel Source.Outputs[Excel Source Output].ExternalColumns[Subcategory]"
+                      dataType="wstr"
+                      length="255"
+                      name="Subcategory" />
+                    <externalMetadataColumn
+                      refId="Package\Load Product\Excel Source.Outputs[Excel Source Output].ExternalColumns[Brand]"
+                      dataType="wstr"
+                      length="255"
+                      name="Brand" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load Product\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Product\Excel Source.Outputs[Excel Source Error Output].Columns[ProductID]"
+                      dataType="r8"
+                      lineageId="Package\Load Product\Excel Source.Outputs[Excel Source Error Output].Columns[ProductID]"
+                      name="ProductID" />
+                    <outputColumn
+                      refId="Package\Load Product\Excel Source.Outputs[Excel Source Error Output].Columns[ProductCode]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load Product\Excel Source.Outputs[Excel Source Error Output].Columns[ProductCode]"
+                      name="ProductCode" />
+                    <outputColumn
+                      refId="Package\Load Product\Excel Source.Outputs[Excel Source Error Output].Columns[Description]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load Product\Excel Source.Outputs[Excel Source Error Output].Columns[Description]"
+                      name="Description" />
+                    <outputColumn
+                      refId="Package\Load Product\Excel Source.Outputs[Excel Source Error Output].Columns[Category]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load Product\Excel Source.Outputs[Excel Source Error Output].Columns[Category]"
+                      name="Category" />
+                    <outputColumn
+                      refId="Package\Load Product\Excel Source.Outputs[Excel Source Error Output].Columns[Subcategory]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load Product\Excel Source.Outputs[Excel Source Error Output].Columns[Subcategory]"
+                      name="Subcategory" />
+                    <outputColumn
+                      refId="Package\Load Product\Excel Source.Outputs[Excel Source Error Output].Columns[Brand]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load Product\Excel Source.Outputs[Excel Source Error Output].Columns[Brand]"
+                      name="Brand" />
+                    <outputColumn
+                      refId="Package\Load Product\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Product\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Product\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Product\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Product\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Product]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Product\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.SalesDWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.SalesDWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ProductID]"
+                      cachedDataType="r8"
+                      cachedName="ProductID"
+                      externalMetadataColumnId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      lineageId="Package\Load Product\Excel Source.Outputs[Excel Source Output].Columns[ProductID]" />
+                    <inputColumn
+                      refId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ProductCode]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ProductCode"
+                      externalMetadataColumnId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductCode]"
+                      lineageId="Package\Load Product\Excel Source.Outputs[Excel Source Output].Columns[ProductCode]" />
+                    <inputColumn
+                      refId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Description]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Description"
+                      externalMetadataColumnId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      lineageId="Package\Load Product\Excel Source.Outputs[Excel Source Output].Columns[Description]" />
+                    <inputColumn
+                      refId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Category]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Category"
+                      externalMetadataColumnId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\Load Product\Excel Source.Outputs[Excel Source Output].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Subcategory]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Subcategory"
+                      externalMetadataColumnId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Subcategory]"
+                      lineageId="Package\Load Product\Excel Source.Outputs[Excel Source Output].Columns[Subcategory]" />
+                    <inputColumn
+                      refId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Brand]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Brand"
+                      externalMetadataColumnId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Brand]"
+                      lineageId="Package\Load Product\Excel Source.Outputs[Excel Source Output].Columns[Brand]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      dataType="r8"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="ProductCode" />
+                    <externalMetadataColumn
+                      refId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      dataType="wstr"
+                      length="255"
+                      name="Description" />
+                    <externalMetadataColumn
+                      refId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      dataType="wstr"
+                      length="255"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Subcategory]"
+                      dataType="wstr"
+                      length="255"
+                      name="Subcategory" />
+                    <externalMetadataColumn
+                      refId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Brand]"
+                      dataType="wstr"
+                      length="255"
+                      name="Brand" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Product\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Product\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Product\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Product\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Product\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load Product.Paths[Excel Source Output]"
+              endId="Package\Load Product\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Load Product\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load Reps"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{AB63BE5C-8EAC-4E82-ADE4-419AD650DAE2}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Reps"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load Reps\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable">User::SheetName4</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">1</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Reps\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 10]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 10]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load Reps\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Reps\Excel Source.Outputs[Excel Source Output].Columns[RepID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Reps\Excel Source.Outputs[Excel Source Output].ExternalColumns[RepID]"
+                      lineageId="Package\Load Reps\Excel Source.Outputs[Excel Source Output].Columns[RepID]"
+                      name="RepID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Reps\Excel Source.Outputs[Excel Source Output].Columns[RepName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Reps\Excel Source.Outputs[Excel Source Output].ExternalColumns[RepName]"
+                      length="255"
+                      lineageId="Package\Load Reps\Excel Source.Outputs[Excel Source Output].Columns[RepName]"
+                      name="RepName"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Reps\Excel Source.Outputs[Excel Source Output].ExternalColumns[RepID]"
+                      dataType="r8"
+                      name="RepID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Reps\Excel Source.Outputs[Excel Source Output].ExternalColumns[RepName]"
+                      dataType="wstr"
+                      length="255"
+                      name="RepName" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load Reps\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Reps\Excel Source.Outputs[Excel Source Error Output].Columns[RepID]"
+                      dataType="r8"
+                      lineageId="Package\Load Reps\Excel Source.Outputs[Excel Source Error Output].Columns[RepID]"
+                      name="RepID" />
+                    <outputColumn
+                      refId="Package\Load Reps\Excel Source.Outputs[Excel Source Error Output].Columns[RepName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load Reps\Excel Source.Outputs[Excel Source Error Output].Columns[RepName]"
+                      name="RepName" />
+                    <outputColumn
+                      refId="Package\Load Reps\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Reps\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Reps\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Reps\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Reps\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Reps]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Reps\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.SalesDWH 6]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.SalesDWH 6]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Reps\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Reps\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RepID]"
+                      cachedDataType="r8"
+                      cachedName="RepID"
+                      externalMetadataColumnId="Package\Load Reps\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RepID]"
+                      lineageId="Package\Load Reps\Excel Source.Outputs[Excel Source Output].Columns[RepID]" />
+                    <inputColumn
+                      refId="Package\Load Reps\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RepName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="RepName"
+                      externalMetadataColumnId="Package\Load Reps\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RepName]"
+                      lineageId="Package\Load Reps\Excel Source.Outputs[Excel Source Output].Columns[RepName]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Reps\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RepID]"
+                      dataType="r8"
+                      name="RepID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Reps\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RepName]"
+                      dataType="wstr"
+                      length="255"
+                      name="RepName" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Reps\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load Reps\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Reps\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Reps\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Reps\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Reps\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load Reps.Paths[Excel Source Output]"
+              endId="Package\Load Reps\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Load Reps\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load Sales"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{59444ecd-396b-4076-a7c2-686e83d1eb9c}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Sales"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load Sales\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Sales$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable">User::SheetName1</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">1</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Sales\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 7]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 7]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[ProductID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[ProductID]"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[ProductID]"
+                      name="ProductID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[OrderNumer]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[OrderNumer]"
+                      length="255"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[OrderNumer]"
+                      name="OrderNumer"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[StoreID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[StoreID]"
+                      length="255"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[StoreID]"
+                      name="StoreID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[RepID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[RepID]"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[RepID]"
+                      name="RepID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[Sold]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[Sold]"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[Sold]"
+                      name="Sold"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[Revenue2]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[Revenue2]"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[Revenue2]"
+                      name="Revenue2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[TransactionTime]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[TransactionTime]"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[TransactionTime]"
+                      name="TransactionTime"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID]"
+                      length="255"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[ID]"
+                      name="ID"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[ProductID]"
+                      dataType="r8"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[OrderNumer]"
+                      dataType="wstr"
+                      length="255"
+                      name="OrderNumer" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[StoreID]"
+                      dataType="wstr"
+                      length="255"
+                      name="StoreID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[RepID]"
+                      dataType="r8"
+                      name="RepID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[Sold]"
+                      dataType="r8"
+                      name="Sold" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[Revenue2]"
+                      dataType="r8"
+                      name="Revenue2" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[Returned Reason]"
+                      dataType="wstr"
+                      length="255"
+                      name="Returned Reason" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[TransactionTime]"
+                      dataType="date"
+                      name="TransactionTime" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[ID]"
+                      dataType="wstr"
+                      length="255"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[StoreName]"
+                      dataType="wstr"
+                      length="255"
+                      name="StoreName" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[RepsName]"
+                      dataType="wstr"
+                      length="255"
+                      name="RepsName" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[Product Description]"
+                      dataType="wstr"
+                      length="255"
+                      name="Product Description" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[Brand]"
+                      dataType="wstr"
+                      length="255"
+                      name="Brand" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[F14]"
+                      dataType="wstr"
+                      length="255"
+                      name="F14" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[F15]"
+                      dataType="wstr"
+                      length="255"
+                      name="F15" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[F16]"
+                      dataType="wstr"
+                      length="255"
+                      name="F16" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].ExternalColumns[F17]"
+                      dataType="wstr"
+                      length="255"
+                      name="F17" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output].Columns[OrderNumer]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output].Columns[OrderNumer]"
+                      name="OrderNumer" />
+                    <outputColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output].Columns[StoreID]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output].Columns[StoreID]"
+                      name="StoreID" />
+                    <outputColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output].Columns[RepID]"
+                      dataType="r8"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output].Columns[RepID]"
+                      name="RepID" />
+                    <outputColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output].Columns[ProductID]"
+                      dataType="r8"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output].Columns[ProductID]"
+                      name="ProductID" />
+                    <outputColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output].Columns[Sold]"
+                      dataType="r8"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output].Columns[Sold]"
+                      name="Sold" />
+                    <outputColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output].Columns[Revenue2]"
+                      dataType="r8"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output].Columns[Revenue2]"
+                      name="Revenue2" />
+                    <outputColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output].Columns[TransactionTime]"
+                      dataType="date"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output].Columns[TransactionTime]"
+                      name="TransactionTime" />
+                    <outputColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output].Columns[ID]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output].Columns[ID]"
+                      name="ID" />
+                    <outputColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Sales\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Sales]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Sales\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.SalesDWH 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.SalesDWH 2]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ProductID]"
+                      cachedDataType="r8"
+                      cachedName="ProductID"
+                      externalMetadataColumnId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[ProductID]" />
+                    <inputColumn
+                      refId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OrderNumer]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="OrderNumer"
+                      externalMetadataColumnId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderNumer]"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[OrderNumer]" />
+                    <inputColumn
+                      refId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StoreID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="StoreID"
+                      externalMetadataColumnId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StoreID]"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[StoreID]" />
+                    <inputColumn
+                      refId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RepID]"
+                      cachedDataType="r8"
+                      cachedName="RepID"
+                      externalMetadataColumnId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RepID]"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[RepID]" />
+                    <inputColumn
+                      refId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sold]"
+                      cachedDataType="r8"
+                      cachedName="Sold"
+                      externalMetadataColumnId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sold]"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[Sold]" />
+                    <inputColumn
+                      refId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Revenue2]"
+                      cachedDataType="r8"
+                      cachedName="Revenue2"
+                      externalMetadataColumnId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Revenue2]"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[Revenue2]" />
+                    <inputColumn
+                      refId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TransactionTime]"
+                      cachedDataType="date"
+                      cachedName="TransactionTime"
+                      externalMetadataColumnId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TransactionTime]"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[TransactionTime]" />
+                    <inputColumn
+                      refId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ID]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="ID"
+                      externalMetadataColumnId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      lineageId="Package\Load Sales\Excel Source.Outputs[Excel Source Output].Columns[ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ProductID]"
+                      dataType="r8"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrderNumer]"
+                      dataType="wstr"
+                      length="255"
+                      name="OrderNumer" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StoreID]"
+                      dataType="r8"
+                      name="StoreID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RepID]"
+                      dataType="r8"
+                      name="RepID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sold]"
+                      dataType="r8"
+                      name="Sold" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Revenue2]"
+                      dataType="r8"
+                      name="Revenue2" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TransactionTime]"
+                      dataType="dbTimeStamp"
+                      name="TransactionTime" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      dataType="wstr"
+                      length="255"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SalesID]"
+                      dataType="i4"
+                      name="SalesID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Sales\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Sales\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Sales\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Sales\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Sales\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load Sales.Paths[Excel Source Output]"
+              endId="Package\Load Sales\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Load Sales\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Load Stores"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{B6FB713A-5DCF-4B54-A8A7-CE895EC36968}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Stores"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load Stores\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable">User::SheetName3</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">1</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Stores\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 9]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 9]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load Stores\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Stores\Excel Source.Outputs[Excel Source Output].Columns[StoreID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Stores\Excel Source.Outputs[Excel Source Output].ExternalColumns[StoreID]"
+                      lineageId="Package\Load Stores\Excel Source.Outputs[Excel Source Output].Columns[StoreID]"
+                      name="StoreID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Stores\Excel Source.Outputs[Excel Source Output].Columns[StoreName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Stores\Excel Source.Outputs[Excel Source Output].ExternalColumns[StoreName]"
+                      length="255"
+                      lineageId="Package\Load Stores\Excel Source.Outputs[Excel Source Output].Columns[StoreName]"
+                      name="StoreName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load Stores\Excel Source.Outputs[Excel Source Output].Columns[Region]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load Stores\Excel Source.Outputs[Excel Source Output].ExternalColumns[Region]"
+                      length="255"
+                      lineageId="Package\Load Stores\Excel Source.Outputs[Excel Source Output].Columns[Region]"
+                      name="Region"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Stores\Excel Source.Outputs[Excel Source Output].ExternalColumns[StoreID]"
+                      dataType="r8"
+                      name="StoreID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Stores\Excel Source.Outputs[Excel Source Output].ExternalColumns[StoreName]"
+                      dataType="wstr"
+                      length="255"
+                      name="StoreName" />
+                    <externalMetadataColumn
+                      refId="Package\Load Stores\Excel Source.Outputs[Excel Source Output].ExternalColumns[Region]"
+                      dataType="wstr"
+                      length="255"
+                      name="Region" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load Stores\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Stores\Excel Source.Outputs[Excel Source Error Output].Columns[StoreID]"
+                      dataType="r8"
+                      lineageId="Package\Load Stores\Excel Source.Outputs[Excel Source Error Output].Columns[StoreID]"
+                      name="StoreID" />
+                    <outputColumn
+                      refId="Package\Load Stores\Excel Source.Outputs[Excel Source Error Output].Columns[StoreName]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load Stores\Excel Source.Outputs[Excel Source Error Output].Columns[StoreName]"
+                      name="StoreName" />
+                    <outputColumn
+                      refId="Package\Load Stores\Excel Source.Outputs[Excel Source Error Output].Columns[Region]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Load Stores\Excel Source.Outputs[Excel Source Error Output].Columns[Region]"
+                      name="Region" />
+                    <outputColumn
+                      refId="Package\Load Stores\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Stores\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Stores\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Stores\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load Stores\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Stores]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load Stores\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.SalesDWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.SalesDWH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load Stores\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load Stores\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StoreID]"
+                      cachedDataType="r8"
+                      cachedName="StoreID"
+                      externalMetadataColumnId="Package\Load Stores\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StoreID]"
+                      lineageId="Package\Load Stores\Excel Source.Outputs[Excel Source Output].Columns[StoreID]" />
+                    <inputColumn
+                      refId="Package\Load Stores\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[StoreName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="StoreName"
+                      externalMetadataColumnId="Package\Load Stores\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StoreName]"
+                      lineageId="Package\Load Stores\Excel Source.Outputs[Excel Source Output].Columns[StoreName]" />
+                    <inputColumn
+                      refId="Package\Load Stores\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Region]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Region"
+                      externalMetadataColumnId="Package\Load Stores\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      lineageId="Package\Load Stores\Excel Source.Outputs[Excel Source Output].Columns[Region]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load Stores\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StoreID]"
+                      dataType="r8"
+                      name="StoreID" />
+                    <externalMetadataColumn
+                      refId="Package\Load Stores\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[StoreName]"
+                      dataType="wstr"
+                      length="255"
+                      name="StoreName" />
+                    <externalMetadataColumn
+                      refId="Package\Load Stores\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      dataType="wstr"
+                      length="255"
+                      name="Region" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load Stores\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load Stores\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load Stores\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load Stores\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load Stores\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load Stores\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load Stores.Paths[Excel Source Output]"
+              endId="Package\Load Stores\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Load Stores\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{0E92952A-650B-4BD6-A8AA-423C2B5A15BC}"
+      DTS:EvalOp="3"
+      DTS:Expression="@[User::SheetName1]==&quot;Sales$&quot;"
+      DTS:From="Package\Data Flow Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Load Sales" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{7F7FD460-31A5-4214-9D0B-694443DDEF6C}"
+      DTS:EvalOp="3"
+      DTS:Expression="@[User::SheetName2]==&quot;Product$&quot;"
+      DTS:From="Package\Data Flow Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Load Product" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{D28708F8-9A91-4729-8EAD-A83CC4B81001}"
+      DTS:EvalOp="3"
+      DTS:Expression="@[User::SheetName3]==&quot;Stores$&quot;"
+      DTS:From="Package\Data Flow Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Load Stores" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{FAC1EC3D-7FFA-4D18-A4F0-E5F6E46582DC}"
+      DTS:EvalOp="3"
+      DTS:Expression="@[User::SheetName4]==&quot;Reps$&quot;"
+      DTS:From="Package\Data Flow Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Load Reps" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="457,53" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Load Sales"
+          TopLeft="165,249" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Load Product"
+          TopLeft="347,261" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="489.6,95">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-260.1,154"
+              Start="0,0"
+              End="-260.1,146.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.4421831637373" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42.4421831637373"
+                    Point2="0,46.4421831637373"
+                    Point3="-4,46.4421831637373" />
+                  <mssgle:LineSegment
+                    End="-256.1,46.4421831637373" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-256.1,46.4421831637373"
+                    Point2="-260.1,46.4421831637373"
+                    Point3="-260.1,50.4421831637373" />
+                  <mssgle:LineSegment
+                    End="-260.1,146.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-138.05,51.4421831637373,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="518.2,95">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-100.7,166"
+              Start="0,0"
+              End="-100.7,158.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.3174835405999" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,70.3174835405999"
+                    Point2="0,74.3174835405999"
+                    Point3="-4,74.3174835405999" />
+                  <mssgle:LineSegment
+                    End="-96.7,74.3174835405999" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-96.7,74.3174835405999"
+                    Point2="-100.7,74.3174835405999"
+                    Point3="-100.7,78.3174835405999" />
+                  <mssgle:LineSegment
+                    End="-100.7,158.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-58.35,79.3174835405999,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="134,42"
+          Id="Package\Load Stores"
+          TopLeft="532,259" />
+        <NodeLayout
+          Size="128,42"
+          Id="Package\Load Reps"
+          TopLeft="699,259" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="546.8,95">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="52.2,164"
+              Start="0,0"
+              End="52.2,156.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,69.4220921726408" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,69.4220921726408"
+                    Point2="0,73.4220921726408"
+                    Point3="4,73.4220921726408" />
+                  <mssgle:LineSegment
+                    End="48.2,73.4220921726408" />
+                  <mssgle:CubicBezierSegment
+                    Point1="48.2,73.4220921726408"
+                    Point2="52.2,73.4220921726408"
+                    Point3="52.2,77.4220921726408" />
+                  <mssgle:LineSegment
+                    End="52.2,156.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="18.1,78.4220921726408,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="575.4,95">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="187.6,164"
+              Start="0,0"
+              End="187.6,156.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.4579093432008" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.4579093432008"
+                    Point2="0,49.4579093432008"
+                    Point3="4,49.4579093432008" />
+                  <mssgle:LineSegment
+                    End="183.6,49.4579093432008" />
+                  <mssgle:CubicBezierSegment
+                    Point1="183.6,49.4579093432008"
+                    Point2="187.6,49.4579093432008"
+                    Point3="187.6,53.4579093432008" />
+                  <mssgle:LineSegment
+                    End="187.6,156.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="85.8,54.4579093432008,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load Sales">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Load Sales\Excel Source"
+          TopLeft="167,156" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load Sales\OLE DB Destination"
+          TopLeft="176,233" />
+        <EdgeLayout
+          Id="Package\Load Sales.Paths[Excel Source Output]"
+          TopLeft="236.5,198">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="25,35"
+              Start="0,0"
+              End="25,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="4,17.5" />
+                  <mssgle:LineSegment
+                    End="21,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="21,17.5"
+                    Point2="25,17.5"
+                    Point3="25,21.5" />
+                  <mssgle:LineSegment
+                    End="25,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Sales\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Load Product">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load Product\OLE DB Destination"
+          TopLeft="165,263" />
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Load Product\Excel Source"
+          TopLeft="170,161" />
+        <EdgeLayout
+          Id="Package\Load Product.Paths[Excel Source Output]"
+          TopLeft="239.5,203">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11,60"
+              Start="0,0"
+              End="11,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
+                  <mssgle:LineSegment
+                    End="7,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7,30"
+                    Point2="11,30"
+                    Point3="11,34" />
+                  <mssgle:LineSegment
+                    End="11,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Product\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Product\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Load Stores">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Load Stores\Excel Source"
+          TopLeft="290,112" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load Stores\OLE DB Destination"
+          TopLeft="297,251" />
+        <EdgeLayout
+          Id="Package\Load Stores.Paths[Excel Source Output]"
+          TopLeft="359.5,154">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="23,97"
+              Start="0,0"
+              End="23,89.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44.5"
+                    Point2="0,48.5"
+                    Point3="4,48.5" />
+                  <mssgle:LineSegment
+                    End="19,48.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="19,48.5"
+                    Point2="23,48.5"
+                    Point3="23,52.5" />
+                  <mssgle:LineSegment
+                    End="23,89.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\Load Reps">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="139,42"
+          Id="Package\Load Reps\Excel Source"
+          TopLeft="427,157" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load Reps\OLE DB Destination"
+          TopLeft="468,287" />
+        <EdgeLayout
+          Id="Package\Load Reps.Paths[Excel Source Output]"
+          TopLeft="496.5,199">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="57,88"
+              Start="0,0"
+              End="57,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40"
+                    Point2="0,44"
+                    Point3="4,44" />
+                  <mssgle:LineSegment
+                    End="53,44" />
+                  <mssgle:CubicBezierSegment
+                    Point1="53,44"
+                    Point2="57,44"
+                    Point3="57,48" />
+                  <mssgle:LineSegment
+                    End="57,80.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Stores\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Stores\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Reps\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Reps\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Sales\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
